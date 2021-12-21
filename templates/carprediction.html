@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    car price prediction
+  </title>
+
+  <style>
+    /* Styling the Body element i.e. Color,
+		Font, Alignment */
+    body {
+      background-color: #AED6F1  ;
+      font-family: cursive;
+      text-align: center;
+    }
+
+    /* Styling the Form (Color, Padding, Shadow) */
+    form {
+      background-color: #F8F9F9;
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 30px 20px;
+      box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Styling form-control Class */
+    .form-control {
+      text-align: left;
+      margin-bottom: 25px;
+    }
+
+    /* Styling form-control Label */
+    .form-control label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    /* Styling form-control input,
+		select, textarea */
+    .form-control input,
+    .form-control select,
+    .form-control textarea {
+      border: 1px solid #777;
+      border-radius: 2px;
+      font-family: inherit;
+      padding: 10px;
+      display: block;
+      width: 95%;
+    }
+
+    /* Styling form-control Radio
+		button and Checkbox */
+    .form-control input[type="radio"],
+    .form-control input[type="checkbox"] {
+      display: inline-block;
+      width: auto;
+    }
+
+    /* Styling Button */
+    button {
+      background-color: #AED6F1;
+      border: 1px solid #777;
+      border-radius: 2px;
+      font-family: inherit;
+      font-size: 21px;
+      display: block;
+      width: 100%;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Used Car price prediction</h1>
+
+  <!-- Create Form -->
+  <form id="form" action="/predict" method="post" >
+
+    <!-- Details -->
+    <div class="form-control">
+      <label for="year">
+        Year
+      </label>
+
+      <!-- Input Type number -->
+      <input type="number" max="2020" id="Year" name="Year" placeholder="Enter Year" required />
+    </div>
+
+    <div class="form-control">
+      <label for="What is the Showroom Price?(In lakhs)">
+        What is the Showroom Price?(In lakhs)
+      </label>
+
+      <!-- Input Type number-->
+      <input type="number" step="any" id="What is the Showroom Price?(In lakhs)" name="What is the Showroom Price?(In lakhs)" placeholder="Enter showroom Price" required />
+    </div>
+
+    <div class="form-control">
+      <label for="How Many Kilometers Drived?">
+        How Many Kilometers Drived?
+      </label>
+
+      <!-- Input Type number -->
+      <input type="number" step="any" id="How Many Kilometers Drived?" name="How Many Kilometers Drived?" placeholder="Enter Kilometers Drived " required/>
+    </div>
+
+    <div class="form-control">
+      <label for="How much owners previously had the car?">
+        How much owners previously had the car?
+      </label>
+
+      <!-- Dropdown options -->
+      <select name="How much owners previously had the car?" id="How much owners previously had the car?" name="How much owners previously had the car?">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+
+    <div class="form-control">
+      <label for="What Is the Fuel type?">
+        What Is the Fuel type?
+      </label>
+
+      <!-- Dropdown options -->
+      <select name="What Is the Fuel type?" id="What Is the Fuel type?" name="What Is the Fuel type?">
+        <option value="Petrol">Petrol</option>
+        <option value="Diesel">Diesel</option>
+        <option value="CNG">CNG</option>
+      </select>
+    </div>
+
+    <div class="form-control">
+      <label for="Are you A Dealer or Individual?">
+        Are you A Dealer or Individual?
+      </label>
+
+      <!-- Dropdown options -->
+      <select name="Are you A Dealer or Individual?" id="Are you A Dealer or Individual?" name="Are you A Dealer or Individual?">
+        <option value="Dealer">Dealer</option>
+        <option value="Individual">Individual</option>
+      </select>
+    </div>
+
+    <div class="form-control">
+      <label for="Transmission type">
+        Transmission type
+      </label>
+
+      <!-- Dropdown options -->
+      <select name="Transmission type" id="Transmission type" name="Transmission type">
+        <option value="Manual car">Manual car</option>
+        <option value="Automatic car">Automatic car</option>
+      </select>
+    </div>
+
+
+
+
+    <!-- Multi-line Text Input Control -->
+    <button type="submit" value="submit">
+      Calculate the selling price
+    </button>
+  </form>
+</body>
+
+</html>
